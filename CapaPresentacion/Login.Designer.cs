@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNoDocumento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnIngresar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -100,12 +100,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Contraseña:";
             // 
-            // txtContrasena
+            // txtClave
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(317, 173);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(270, 20);
-            this.txtContrasena.TabIndex = 8;
+            this.txtClave.Location = new System.Drawing.Point(317, 173);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(270, 20);
+            this.txtClave.TabIndex = 8;
             // 
             // btnIngresar
             // 
@@ -151,7 +151,7 @@
             this.ClientSize = new System.Drawing.Size(664, 345);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNoDocumento);
             this.Controls.Add(this.label2);
@@ -176,7 +176,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNoDocumento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtClave;
         private FontAwesome.Sharp.IconButton btnIngresar;
         private FontAwesome.Sharp.IconButton btnCancelar;
     }

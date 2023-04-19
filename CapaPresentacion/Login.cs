@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaEntidad;
+using CapaNegocio;
+
 namespace CapaPresentacion
 {
     public partial class Login : Form
@@ -18,7 +21,16 @@ namespace CapaPresentacion
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
+
+
         {
+
+            List<Usuario> TEST = new CN_Usuario().Listar();
+
+
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtNoDocumento.Text 
+            &&  u.Clave == txtClave.Text).FirstOrDefault();
+
             SistemaVenta form = new SistemaVenta();
 
             form.Show();
@@ -36,7 +48,7 @@ namespace CapaPresentacion
 
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
-            txtContrasena.Text = "";
+            txtClave.Text = "";
             txtNoDocumento.Text = "";
 
             this.Show();

@@ -18,7 +18,7 @@ namespace CapaEntidad
 
         public string oRol { get; set; }
 
-        public string Estado { get; set; }
+        public bool Estado { get; set; }
 
         public string FechaRegistro { get; set; }
 
