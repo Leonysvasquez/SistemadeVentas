@@ -31,12 +31,22 @@ namespace CapaPresentacion
             Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtNoDocumento.Text 
             &&  u.Clave == txtClave.Text).FirstOrDefault();
 
-            SistemaVenta form = new SistemaVenta();
+            
 
-            form.Show();
-            this.Hide();
+            if (ousuario != null)
+            {
+                SistemaVenta form = new SistemaVenta(ousuario);
 
-            form.FormClosing += frm_closing;
+                form.Show();
+                this.Hide();
+
+                form.FormClosing += frm_closing;
+            }
+            else
+            {
+                MessageBox.Show("no se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
 
         }
 

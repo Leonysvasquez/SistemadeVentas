@@ -40,6 +40,10 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.Sistema = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usuario = new System.Windows.Forms.Label();
+            this.lblusuario = new System.Windows.Forms.Label();
+            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,10 +76,14 @@
             this.menuUsuario.Size = new System.Drawing.Size(80, 69);
             this.menuUsuario.Text = "Usuarios";
             this.menuUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuUsuario.Click += new System.EventHandler(this.menuUsuario_Click);
             // 
             // menuMantenedor
             // 
             this.menuMantenedor.AutoSize = false;
+            this.menuMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iconMenuItem1,
+            this.iconMenuItem2});
             this.menuMantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.menuMantenedor.IconColor = System.Drawing.Color.Black;
             this.menuMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -195,18 +203,63 @@
             this.panel1.Size = new System.Drawing.Size(800, 392);
             this.panel1.TabIndex = 3;
             // 
-            // Form1
+            // usuario
+            // 
+            this.usuario.BackColor = System.Drawing.Color.SteelBlue;
+            this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.usuario.Location = new System.Drawing.Point(545, 23);
+            this.usuario.Name = "usuario";
+            this.usuario.Size = new System.Drawing.Size(79, 30);
+            this.usuario.TabIndex = 4;
+            this.usuario.Text = "Usuario:";
+            this.usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblusuario.Location = new System.Drawing.Point(611, 23);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(79, 30);
+            this.lblusuario.TabIndex = 5;
+            this.lblusuario.Text = "lblusuario";
+            this.lblusuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // iconMenuItem1
+            // 
+            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem1.Name = "iconMenuItem1";
+            this.iconMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.iconMenuItem1.Text = "Categoria";
+            // 
+            // iconMenuItem2
+            // 
+            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem2.Name = "iconMenuItem2";
+            this.iconMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.iconMenuItem2.Text = "Producto";
+            // 
+            // SistemaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.lblusuario);
+            this.Controls.Add(this.usuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sistema);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
+            this.Name = "SistemaVenta";
             this.Text = "Sistema de Ventas";
+            this.Load += new System.EventHandler(this.SistemaVenta_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -228,6 +281,10 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label Sistema;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label usuario;
+        private System.Windows.Forms.Label lblusuario;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
     }
 }
 
